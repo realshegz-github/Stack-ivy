@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: cabinet, sans-serif;
+}
+h1 {
+  font-family: cabinetBold;
+}
+@font-face {
+  font-family: cabinet;
+  src: url(./assets/font/CabinetGrotesk-Regular.woff);
+}
+.cabinet {
+  font-family: cabinet;
+}
+@font-face {
+  font-family: cabinetBold;
+  src: url(./assets/font/CabinetGrotesk-Bold.woff);
+}
+.cabinetBd {
+  font-family: cabinetBold;
+}
+@layer utilities {
+  .maxContainer {
+    @apply mx-auto max-w-[1280px];
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+}
+
+
+.slider-with-gap .slick-slide {
+  padding: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
