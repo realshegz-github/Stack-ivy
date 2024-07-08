@@ -1,7 +1,7 @@
-import React from "react";
+import React, { CSSProperties, useRef } from "react";
 import Slider from "react-slick";
 import Card from "../Card";
-import { HeadingCarousel } from "../../assets/svgs/icons";
+import { HeadingCarousel, Next } from "../../assets/svgs/icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -59,51 +59,49 @@ const data = [
   },
 ];
 
-interface ArrowProps {
-  className?: string;
-  style?: React.CSSProperties;
-  onClick?: () => void;
-}
+const Features: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const sliderRef = useRef<any | null>(null);
 
-const SampleNextArrow: React.FC<ArrowProps> = ({
-  className,
-  style,
-  onClick,
-}) => {
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "gray" }}
-      onClick={onClick}
-    />
-  );
-};
+  const arrowStyles: CSSProperties = {
+    position: "absolute",
+    zIndex: 2,
+    width: 30,
+    height: 30,
+    cursor: "pointer",
+  };
 
-const SamplePrevArrow: React.FC<ArrowProps> = ({
-  className,
-  style,
-  onClick,
-}) => {
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "gray" }}
-      onClick={onClick}
-    />
-  );
-};
-const Features = () => {
   const settings = {
-    dots: true,
     infinite: true,
+    dots: true,
+    adaptiveHeight: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    arrows: true,
+    prevArrow: (
+      <button
+        type="button"
+        style={{
+          ...arrowStyles,
+          left: 15,
+        }}
+      >
+        {/* <div className="next-icon font-light  bg-[#EAEAEA] p-5 absolute -top-40 left-2 rounded-full">
+          {Prev}
+        </div> */}
+      </button>
+    ),
+    nextArrow: (
+      <button type="button" style={{ ...arrowStyles, right: 15 }}>
+        <div className="next-icon font-light  bg-[#EAEAEA] p-2 sm:p-5 absolute -top-36 xs:-top-48 right-2 rounded-full">
+          {Next}
+        </div>
+      </button>
+    ),
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1240,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -112,14 +110,14 @@ const Features = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 786,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -132,11 +130,15 @@ const Features = () => {
     <section className="w-full relative  text-black backdrop-blur-lg flex flex-col justify-center items-center">
       <div className="maxContainer w-full px-[5%] pt-12 sm:pt-16 md:pt-20  pb-24 flex flex-col  ">
         <div className="w-full">
-          <div className="relative mb-24">{HeadingCarousel}</div>
+          <div className="relative mb-16 ss:mb-20">{HeadingCarousel}</div>
 
-          <Slider {...settings}>
+          <Slider ref={sliderRef} {...settings}>
             {data.map((item, index) => (
-              <div key={index} className="slide-item">
+              <div
+                key={index}
+                className="slide-item"
+                style={{ padding: "0 10px" }}
+              >
                 <Card
                   backgroundImage={item.bg}
                   text={item.text}

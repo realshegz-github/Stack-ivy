@@ -51,11 +51,19 @@ h1 {
   }
 }
 
-
 .slider-with-gap .slick-slide {
   padding: 0 10px;
 }
 
 .slick-list {
-  margin: 0 -10px;
+  margin: 0 10px;
+}
+.slick-slider {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* gap: 20px; */
 }

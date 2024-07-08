@@ -10,7 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ backgroundImage, text, color, textW }) => {
   return (
     <div
-      className={`w-full  max-w-[300px] h-[195px] bg-cover text-white px-5 pt-8 pb-5 rounded-xl
+      className={`w-full  max-w-[345px] ss:max-w-[250px]  md:max-w-[300px] lg:max-w-[265px] lg mx-3 min-h-[195px] xx:bg-cover text-white px-5 pt-8 pb-5 rounded-xl
       `}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
