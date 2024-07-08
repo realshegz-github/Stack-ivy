@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="w-full relative h-full text-white backdrop-blur-lg bg-[#10001F] flex flex-col justify-center items-center">
+    <section className="w-full relative h-full text-white backdrop-blur-lg bg-[#10001F] flex flex-col justify-center items-center min-h-screen">
       <div className="maxContainer mt-24 w-full pl-[5%] pr-[5%] sm:pr-[3%] pt-12 sm:pt-16 md:pt-24 flex flex-col">
         <form
           className="flex flex-col relative sm:flex-row sm:justify-between gap-12 sm:gap-8"

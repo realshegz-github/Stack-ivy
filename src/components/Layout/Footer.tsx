@@ -22,7 +22,7 @@ const Footer = () => {
       >
         <div className="flex flex-col relative sm:flex-row items-center  sm:items-start sm:justify-between gap-5 sm:gap-8">
           <div className="pb-5 sm:pb-10 md:pb-16">
-            <h2 className="max-w-[323px] leading-tight mb-10 text-[36px] font-bold .cabinentBd">
+            <h2 className="max-w-[323px] leading-tight mb-10 text-[30px]  text-center sm:text-start sm:text-[36px] font-bold .cabinentBd">
               Download for free Start saving Today
             </h2>
 

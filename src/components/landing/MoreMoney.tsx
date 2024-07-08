@@ -66,14 +66,14 @@ const MoreMoney = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full pt-16 sm:pt-20 pb-20 md:pb-28 px-[8%] shadow-glassy sm:backdrop-blur-sm bg-[#29014B] border border-secondary ">
+        <div className="w-full pt-16  pb-20 md:pb-28 px-[8%] shadow-glassy sm:backdrop-blur-sm bg-[#29014B] border border-secondary ">
           <div className="grid grid-cols-1 gap-[30px] sm:gap-[8%] sm:grid-cols-2">
             {" "}
             {data.map((item, index) => (
               <Fade up duration="2000">
                 <div
                   key={index}
-                  className="max-w-[358px] w-full px-8 py-7 hover:rounded-3xl hover:bg-[#43027E] transition duration-300 ease-in-out"
+                  className="max-w-[358px] w-full px-5 sm:px-8 py-7 hover:rounded-3xl hover:bg-[#43027E] transition duration-300 ease-in-out"
                 >
                   <div
                     className={`rounded-full w-[50px] h-[50px] ${item.bg} flex items-center justify-center shadow-glassy sm:backdrop-blur-sm mb-8`}

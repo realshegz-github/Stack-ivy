@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </ul>
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2 relative">
           <Link
             to="#"
             className="font-medium md:flex-center gap-5 hover:text-gray-400 px-2 md:px-4 py-1 rounded-md cursor-pointer duration-500"
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
               <MdKeyboardArrowDown />
             </div>
             {isHovered && (
-              <div className="absolute top-16 right-5 z-50 bg-secondary shadow-lg min-w-[100px] rounded-md">
+              <div className="absolute top-12 right-0 z-50 bg-secondary shadow-lg min-w-[100px] rounded-md">
                 <ul className="">
                   <li className="p-2 hover:bg-gray-200 cursor-pointer">
                     Option 1

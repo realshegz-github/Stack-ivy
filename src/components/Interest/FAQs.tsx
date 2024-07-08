@@ -41,17 +41,17 @@ export const Faqs = () => {
       <section className="w-full relative text-primary flex flex-col justify-center items-center">
         <div className="maxContainer relative w-full px-[5%] pt-16 md:pt-24 pb-40 flex flex-col">
           {" "}
-          <h2 className="text-lg text-center sm:text-start font-bold mb-8 sm:mb-16 cabinetBd">
+          <h2 className="text-[30px] sm:text-lg text-center sm:text-start font-bold mb-8 sm:mb-16 cabinetBd">
             Questions We Have Been Asked
           </h2>
           <div className="space-y-8">
             {faqsData.map((faq, index) => (
               <div key={index}>
                 <div
-                  className="flex justify-between items-center p-8 shadow-sm bg-[#F9FAFB] rounded-md cursor-pointer"
+                  className="flex justify-between items-center p-5 sm:p-8 shadow-sm bg-[#F9FAFB] rounded-md cursor-pointer"
                   onClick={() => toggle(index)}
                 >
-                  <h3 className="text-[16px] font-bold text-secondary">
+                  <h3 className="text-[16px] sm:font-bold text-secondary">
                     {faq.question}
                   </h3>
                   {selected === index ? (

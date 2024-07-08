@@ -10,8 +10,8 @@ const Testimonial = () => {
         <div className="maxContainer relative w-full pl-[5%] pr-[2%] pt-12 sm:pt-16 md:pt-28 pb-24 flex flex-col">
           <Fade left duration="2000">
             {" "}
-            <div className="relative mb-12">
-              <h1 className="text-lg text-primary leading-tight md:text-xl cabinetBd mb-8">
+            <div className="relative mb-5 sm:mb-12">
+              <h1 className="text-lg text-primary leading-tight md:text-xl cabinetBd sm:mb-8">
                 Don’t Take Our <span className="text-[#E8356D]">Word </span>For
                 It
               </h1>
