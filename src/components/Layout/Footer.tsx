@@ -8,7 +8,6 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-import { Zoom } from "react-reveal";
 import Button from "../common/CustomBtn";
 const Footer = () => {
   return (
@@ -38,11 +37,9 @@ const Footer = () => {
               </Button>
             </div>
           </div>
-          <Zoom>
-            <div className="relative ">
-              <img src={phone} alt="phone" />
-            </div>
-          </Zoom>
+          <div className="relative ">
+            <img src={phone} alt="phone" />
+          </div>
         </div>
       </div>
 
